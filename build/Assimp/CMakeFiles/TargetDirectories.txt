@@ -1,0 +1,13 @@
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/CMakeFiles/uninstall.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/CMakeFiles/UpdateAssimpLibsDebugSymbolsAndDLLs.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/CMakeFiles/ALL_BUILD.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/CMakeFiles/ZERO_CHECK.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/contrib/zlib/CMakeFiles/zlibstatic.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/contrib/zlib/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/contrib/zlib/CMakeFiles/ALL_BUILD.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/code/CMakeFiles/assimp.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/code/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/test/CMakeFiles/unit.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/test/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/Assimp/test/headercheck/CMakeFiles/INSTALL.dir

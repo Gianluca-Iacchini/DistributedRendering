@@ -1,0 +1,9 @@
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/CMakeFiles/spdlog.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/CMakeFiles/PACKAGE.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/CMakeFiles/ALL_BUILD.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/CMakeFiles/ZERO_CHECK.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/example/CMakeFiles/example.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/example/CMakeFiles/PACKAGE.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/example/CMakeFiles/INSTALL.dir
+C:/Users/iacco/Desktop/DR/Project/DistributedRendering/build/spdlog/example/CMakeFiles/ALL_BUILD.dir

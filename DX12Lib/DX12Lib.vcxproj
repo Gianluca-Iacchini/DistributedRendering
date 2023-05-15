@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e1c391fb-ec3f-411e-9af8-99618ddb3805}</ProjectGuid>
+    <RootNamespace>DX12Lib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)/build/lib/debug</OutDir>
+    <IntDir>DX12Lib.dir/Debug</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>Default</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)/Src;$(ProjectDir)/build/DX12Lib/$(Platform)/$(Configuration)/Shaders/;$(SolutionDir)/DirectXTex;$(SolutionDir)/Extern/Assimp/assimp-master/include;$(SolutionDir)/build/Assimp/include;$(SolutionDir)/ImGUI/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\dx12Lib\InputBuffer.cpp" />
+    <ClCompile Include="Src\imgui\imgui.cpp" />
+    <ClCompile Include="Src\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Src\imgui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Src\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Src\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Src\pch.cpp" />
+    <ClCompile Include="Src\dx12Lib\Adapter.cpp" />
+    <ClCompile Include="Src\dx12Lib\Buffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\ByteAddressBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\CommandList.cpp" />
+    <ClCompile Include="Src\dx12Lib\CommandQueue.cpp" />
+    <ClCompile Include="Src\dx12Lib\ConstantBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\ConstantBufferView.cpp" />
+    <ClCompile Include="Src\dx12Lib\DescriptorAllocation.cpp" />
+    <ClCompile Include="Src\dx12Lib\DescriptorAllocator.cpp" />
+    <ClCompile Include="Src\dx12Lib\DescriptorAllocatorPage.cpp" />
+    <ClCompile Include="Src\dx12Lib\Device.cpp" />
+    <ClCompile Include="Src\dx12Lib\DynamicDescriptorHeap.cpp" />
+    <ClCompile Include="Src\dx12Lib\GenerateMipsPSO.cpp" />
+    <ClCompile Include="Src\dx12Lib\GUI.cpp" />
+    <ClCompile Include="Src\dx12Lib\IndexBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\Material.cpp" />
+    <ClCompile Include="Src\dx12Lib\Mesh.cpp" />
+    <ClCompile Include="Src\dx12Lib\PanoToCubemapPSO.cpp" />
+    <ClCompile Include="Src\dx12Lib\PipelineStateObject.cpp" />
+    <ClCompile Include="Src\dx12Lib\RenderTarget.cpp" />
+    <ClCompile Include="Src\dx12Lib\Resource.cpp" />
+    <ClCompile Include="Src\dx12Lib\ResourceStateTracker.cpp" />
+    <ClCompile Include="Src\dx12Lib\RootSignature.cpp" />
+    <ClCompile Include="Src\dx12Lib\Scene.cpp" />
+    <ClCompile Include="Src\dx12Lib\SceneNode.cpp" />
+    <ClCompile Include="Src\dx12Lib\ShaderResourceView.cpp" />
+    <ClCompile Include="Src\dx12Lib\StructuredBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\SwapChain.cpp" />
+    <ClCompile Include="Src\dx12Lib\Texture.cpp" />
+    <ClCompile Include="Src\dx12Lib\UnorderedAccessView.cpp" />
+    <ClCompile Include="Src\dx12Lib\UploadBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\VertexBuffer.cpp" />
+    <ClCompile Include="Src\dx12Lib\VertexTypes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\dx12Lib\InputBuffer.h" />
+    <ClInclude Include="Src\D3D12\d3d12.h" />
+    <ClInclude Include="Src\D3D12\d3d12compatibility.h" />
+    <ClInclude Include="Src\D3D12\d3d12sdklayers.h" />
+    <ClInclude Include="Src\D3D12\d3d12shader.h" />
+    <ClInclude Include="Src\D3D12\D3D12TokenizedProgramFormat.hpp" />
+    <ClInclude Include="Src\D3D12\d3d12video.h" />
+    <ClInclude Include="Src\D3D12\d3dcommon.h" />
+    <ClInclude Include="Src\D3D12\d3dx12.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_barriers.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_check_feature_support.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_core.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_default.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_pipeline_state_stream.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_property_format_table.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_render_pass.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_resource_helpers.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_root_signature.h" />
+    <ClInclude Include="Src\D3D12\d3dx12_state_object.h" />
+    <ClInclude Include="Src\D3D12\dxcore.h" />
+    <ClInclude Include="Src\D3D12\dxcore_interface.h" />
+    <ClInclude Include="Src\D3D12\dxgicommon.h" />
+    <ClInclude Include="Src\D3D12\dxgiformat.h" />
+    <ClInclude Include="Src\imgui\imconfig.h" />
+    <ClInclude Include="Src\imgui\imgui.h" />
+    <ClInclude Include="Src\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="Src\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Src\imgui\imgui_internal.h" />
+    <ClInclude Include="Src\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Src\imgui\imstb_textedit.h" />
+    <ClInclude Include="Src\imgui\imstb_truetype.h" />
+    <ClInclude Include="Src\pch.h" />
+    <ClInclude Include="Src\dx12Lib\Adapter.h" />
+    <ClInclude Include="Src\dx12Lib\Buffer.h" />
+    <ClInclude Include="Src\dx12Lib\ByteAddressBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\CommandList.h" />
+    <ClInclude Include="Src\dx12Lib\CommandQueue.h" />
+    <ClInclude Include="Src\dx12Lib\ConstantBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\ConstantBufferView.h" />
+    <ClInclude Include="Src\dx12Lib\Defines.h" />
+    <ClInclude Include="Src\dx12Lib\DescriptorAllocation.h" />
+    <ClInclude Include="Src\dx12Lib\DescriptorAllocator.h" />
+    <ClInclude Include="Src\dx12Lib\DescriptorAllocatorPage.h" />
+    <ClInclude Include="Src\dx12Lib\Device.h" />
+    <ClInclude Include="Src\dx12Lib\DynamicDescriptorHeap.h" />
+    <ClInclude Include="Src\dx12Lib\GenerateMipsPSO.h" />
+    <ClInclude Include="Src\dx12Lib\GUI.h" />
+    <ClInclude Include="Src\dx12Lib\Helpers.h" />
+    <ClInclude Include="Src\dx12Lib\IndexBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\Material.h" />
+    <ClInclude Include="Src\dx12Lib\Mesh.h" />
+    <ClInclude Include="Src\dx12Lib\PanoToCubemapPSO.h" />
+    <ClInclude Include="Src\dx12Lib\PipelineStateObject.h" />
+    <ClInclude Include="Src\dx12Lib\RenderTarget.h" />
+    <ClInclude Include="Src\dx12Lib\Resource.h" />
+    <ClInclude Include="Src\dx12Lib\ResourceStateTracker.h" />
+    <ClInclude Include="Src\dx12Lib\RootSignature.h" />
+    <ClInclude Include="Src\dx12Lib\Scene.h" />
+    <ClInclude Include="Src\dx12Lib\SceneNode.h" />
+    <ClInclude Include="Src\dx12Lib\ShaderResourceView.h" />
+    <ClInclude Include="Src\dx12Lib\StructuredBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\SwapChain.h" />
+    <ClInclude Include="Src\dx12Lib\Texture.h" />
+    <ClInclude Include="Src\dx12Lib\ThreadSafeQueue.h" />
+    <ClInclude Include="Src\dx12Lib\UnorderedAccessView.h" />
+    <ClInclude Include="Src\dx12Lib\UploadBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\VertexBuffer.h" />
+    <ClInclude Include="Src\dx12Lib\VertexTypes.h" />
+    <ClInclude Include="Src\dx12Lib\Visitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\GenerateMips_CS.hlsl">
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.1</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_GenerateMips_CS</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/build/DX12Lib/$(Platform)/$(Configuration)/Shaders/%(Filename).h</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="Shaders\ImGUI_PS.hlsl">
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/build/DX12Lib/$(Platform)/$(Configuration)/Shaders/%(Filename).h</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_ImGUI_PS</VariableName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.1</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\ImGUI_VS.hlsl">
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/build/DX12Lib/$(Platform)/$(Configuration)/Shaders/%(Filename).h</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_ImGUI_VS</VariableName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.1</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\PanoToCubemap_CS.hlsl">
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)/build/DX12Lib/$(Platform)/$(Configuration)/Shaders/%(Filename).h</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_PanoToCubemap_CS</VariableName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.1</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Src\D3D12\d3d12.idl" />
+    <Midl Include="Src\D3D12\d3d12compatibility.idl" />
+    <Midl Include="Src\D3D12\d3d12sdklayers.idl" />
+    <Midl Include="Src\D3D12\d3d12video.idl" />
+    <Midl Include="Src\D3D12\d3dcommon.idl" />
+    <Midl Include="Src\D3D12\dxgicommon.idl" />
+    <Midl Include="Src\D3D12\dxgiformat.idl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
